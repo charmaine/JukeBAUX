@@ -15,7 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UpcomingPage {
 
+  songs: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.songs = [
+          'Cold Water',
+          'Provider',
+          'God of Joy',
+          'Boopity Bop',
+          'Boop Boop Bop',
+          'Beep',
+          'Bibble Bop'
+      ];
   }
 
   ionViewDidLoad() {
