@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { UpcomingPage } from '../upcoming/upcoming';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
@@ -12,8 +13,7 @@ export class HomePage {
 
   displayName;
 
-  constructor(public navCtrl: NavController,
-    private afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth) {
     afAuth.authState.subscribe(user => {
       if (!user) {
         this.displayName = null;
@@ -33,4 +33,7 @@ export class HomePage {
     this.afAuth.auth.signOut();
   }
 
+  navTo(){
+    this.navCtrl.push(UpcomingPage);
+  }
 }
