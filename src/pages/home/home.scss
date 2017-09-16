@@ -166,4 +166,13 @@ page-home {
     -o-transform: translateZ(0);
     transform: translateZ(0);
   }
+
+  .button {
+    z-index:9999;
+    border-color: white;
+    color: white;
+    position: absolute;
+    left: 230px;
+    bottom: 20px;
+  }
 }

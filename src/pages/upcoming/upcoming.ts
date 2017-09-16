@@ -21,4 +21,5 @@ export class UpcomingPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad UpcomingPage');
   }
+
 }

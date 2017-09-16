@@ -12,6 +12,7 @@ import * as firebase from 'firebase/app';
 export class HomePage {
 
   displayName;
+  upcomingPage = UpcomingPage
 
   constructor(public navCtrl: NavController, private afAuth: AngularFireAuth) {
     afAuth.authState.subscribe(user => {
