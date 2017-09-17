@@ -8,6 +8,7 @@ import { SpotifyService } from '.././spotify-service';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { UpcomingPage } from '../pages/upcoming/upcoming';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -23,7 +24,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    UpcomingPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    UpcomingPage
   ],
   providers: [
     StatusBar,
