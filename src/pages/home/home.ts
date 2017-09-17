@@ -33,6 +33,9 @@ export class HomePage {
         this.displayName = null;
         return;
       }
+
+      window.location.href = 'https://accounts.spotify.com/authorize?response_type=code&client_id=cc620b3e528040b8b0261cbe6d3efa88&redirect_uri=http%3A%2F%2Flocalhost%3A8100%2F%23%2Fredirect&scope=user-modify-playback-state%20user-read-playback-state%20playlist-modify-public';
+
       this.displayName = spotifyService.playDefaultDevice();
     });
 

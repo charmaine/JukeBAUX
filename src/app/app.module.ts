@@ -10,6 +10,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UpcomingPage } from '../pages/upcoming/upcoming';
 import { DetailPage } from '../pages/detail/detail';
+import { RedirectPage } from '../pages/redirect/redirect';
+import { LoginPage } from '../pages/login/login';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
