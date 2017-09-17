@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { UpcomingPage } from '../upcoming/upcoming';
 
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { SpotifyService } from '../../spotify-service';
+
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
@@ -9,6 +13,7 @@ import * as firebase from 'firebase/app';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+@Injectable()
 export class HomePage {
 
   displayName;
@@ -16,13 +21,13 @@ export class HomePage {
   upcomingPage = UpcomingPage;
   id = this.id
 
-  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private spotifyService: SpotifyService) {
     afAuth.authState.subscribe(user => {
       if (!user) {
         this.displayName = null;
         return;
       }
-      this.displayName = user.displayName;
+      this.displayName = spotifyService.playDefaultDevice();
     });
 
     this.displayData = [
