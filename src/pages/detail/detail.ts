@@ -32,25 +32,25 @@ data: any;
    },
    {
       "id": 2,
-      "song": "AAA",
+      "song": "Hotline Bling",
       "artist": "Drake",
       "album": "./assets/img/drake.png"
     },
     {
        "id": 3,
-       "song": "BB",
+       "song": "Hotline Bling",
        "artist": "Drake",
        "album": "./assets/img/drake.png"
      },
      {
         "id": 4,
-        "song": "HCCC",
+        "song": "Hotline Bling",
         "artist": "Drake",
         "album": "./assets/img/drake.png"
       },
       {
          "id": 5,
-         "song": "DDD",
+         "song": "Hotline Bling",
          "artist": "Drake",
          "album": "./assets/img/drake.png"
        }
