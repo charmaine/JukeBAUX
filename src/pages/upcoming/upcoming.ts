@@ -27,36 +27,10 @@ export class UpcomingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http : Http) {
 
-  //this.http.get("http://f155ae88.ngrok.io/songs/?format=json").subscribe(res => {
-    //    this.songs= res.json();
-    //  });
+  this.http.get("http://9e8b6592.ngrok.io/songs/?format=json").subscribe(res => {
+       this.songs= res.json();
+  });
 
-      this.songs = [
-      {
-        "id": 1,
-        "name": "Hotline Bling"
-      },
-      {
-        "id": 2,
-        "name": "A Thousand Miles"
-      },
-      {
-        "id": 3,
-        "name": "SexyBack"
-      },
-      {
-        "id": 4,
-        "name": "Say You Won't Let Go"
-      },
-      {
-        "id": 5,
-        "name": "Roses"
-      },
-      {
-        "id": 6,
-        "name": "Something Just Like This"
-      }
-    ];
   }
 
   more(id){

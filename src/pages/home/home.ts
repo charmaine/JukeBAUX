@@ -26,6 +26,7 @@ export class HomePage {
   displayData : any;
   upcomingPage = UpcomingPage;
   id = this.id
+  var : String;
 
   constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private spotifyService: SpotifyService) {
     afAuth.authState.subscribe(user => {
@@ -56,5 +57,9 @@ export class HomePage {
 
   navTo(){
     this.navCtrl.push('UpcomingPage');
+  }
+
+  switch() {
+    
   }
 }
