@@ -34,27 +34,27 @@ export class UpcomingPage {
       this.songs = [
       {
         "id": 1,
-        "name": "Cold Water"
+        "name": "Hotline Bling"
       },
       {
         "id": 2,
-        "name": "Provider"
+        "name": "A Thousand Miles"
       },
       {
         "id": 3,
-        "name": "God of Joy"
+        "name": "SexyBack"
       },
       {
         "id": 4,
-        "name": "Boopity Bop"
+        "name": "Say You Won't Let Go"
       },
       {
         "id": 5,
-        "name": "Bop Bop Bop"
+        "name": "Roses"
       },
       {
         "id": 6,
-        "name": "Bop to the top"
+        "name": "Something Just Like This"
       }
     ];
   }
