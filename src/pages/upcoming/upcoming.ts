@@ -19,14 +19,31 @@ export class UpcomingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.songs = [
-          'Cold Water',
-          'Provider',
-          'God of Joy',
-          'Boopity Bop',
-          'Boop Boop Bop',
-          'Beep',
-          'Bibble Bop'
-      ];
+      {
+        "id": 1,
+        "title": "Cold Water"
+      },
+      {
+        "id": 2,
+        "title": "Provider"
+      },
+      {
+        "id": 3,
+        "title": "God of Joy"
+      },
+      {
+        "id": 4,
+        "title": "Boopity Bop"
+      },
+      {
+        "id": 5,
+        "title": "Bop Bop Bop"
+      },
+      {
+        "id": 6,
+        "title": "Bop to the top"
+      }
+    ];
   }
 
   ionViewDidLoad() {

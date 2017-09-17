@@ -12,7 +12,9 @@ import * as firebase from 'firebase/app';
 export class HomePage {
 
   displayName;
-  upcomingPage = UpcomingPage
+  displayData : any;
+  upcomingPage = UpcomingPage;
+  id = this.id
 
   constructor(public navCtrl: NavController, private afAuth: AngularFireAuth) {
     afAuth.authState.subscribe(user => {
@@ -22,6 +24,15 @@ export class HomePage {
       }
       this.displayName = user.displayName;
     });
+
+    this.displayData = [
+     {
+       "id": 1,
+       "song": "Pendulum",
+       "artist": "FKA Twig",
+       "album": "../assets/img/fka.jpg"
+     }
+   ];
   }
 
   signInWithEmail() {
