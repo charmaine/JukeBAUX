@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetailPage } from '../detail/detail';
 
 /**
  * Generated class for the UpcomingPage page.
@@ -16,12 +17,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class UpcomingPage {
 
   songs: any;
+  detailPage = DetailPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.songs = [
       {
         "id": 1,
-        "title": "Cold Water"
+        "title": "Hotline Bling"
       },
       {
         "id": 2,
@@ -44,6 +46,11 @@ export class UpcomingPage {
         "title": "Bop to the top"
       }
     ];
+  }
+
+  more(id){
+    this.navCtrl.push(DetailPage, {id: id});
+    console.log({id:id});
   }
 
   ionViewDidLoad() {
