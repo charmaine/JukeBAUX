@@ -64,6 +64,10 @@ export class UpcomingPage {
     console.log({id: id});
   }
 
+  public clear(): void {
+    this.songs = [];
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad UpcomingPage');
   }
