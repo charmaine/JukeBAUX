@@ -27,9 +27,36 @@ export class UpcomingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http : Http) {
 
-  this.http.get("http://f155ae88.ngrok.io/songs/?format=json").subscribe(res => {
-        this.songs= res.json();
-      });
+  //this.http.get("http://f155ae88.ngrok.io/songs/?format=json").subscribe(res => {
+    //    this.songs= res.json();
+    //  });
+
+      this.songs = [
+      {
+        "id": 1,
+        "name": "Cold Water"
+      },
+      {
+        "id": 2,
+        "name": "Provider"
+      },
+      {
+        "id": 3,
+        "name": "God of Joy"
+      },
+      {
+        "id": 4,
+        "name": "Boopity Bop"
+      },
+      {
+        "id": 5,
+        "name": "Bop Bop Bop"
+      },
+      {
+        "id": 6,
+        "name": "Bop to the top"
+      }
+    ];
   }
 
   more(id){
