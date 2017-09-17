@@ -1,6 +1,7 @@
-page-home {
-  $SIDEMENU_TOP: #89fffd;
-  $SIDEMENU_BOTTOM: #77A1D3;
+page-detail {
+
+  $SIDEMENU_TOP: #6A82FB;
+  $SIDEMENU_BOTTOM: #FC5C7D;
   $SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
 
   .toolbar-background-md {
@@ -76,7 +77,7 @@ page-home {
     position: absolute;
     top: 3%;
     left: 50%;
-    background: linear-gradient(to bottom, rgba(#E684AE, 1), rgba(#def, 0) 80%, rgba(white, .5));
+    background: linear-gradient(to bottom, rgba(#6A82FB, 1), rgba(#def, 0) 80%, rgba(white, .5));
     width: 150%;
     height: 100%;
     margin-left: -250px;
@@ -93,7 +94,7 @@ page-home {
   .wave.-two {
     animation: drift 7000ms infinite linear;
     opacity: .4;
-    background: #00AAFF;
+    background: #FC5C7D;
   }
 
   .box:after {
@@ -113,7 +114,7 @@ page-home {
     // left: 0;
     // top: 0;
     width: 100%;
-    z-index: 1;
+    // z-index: 1;
     // line-height: 380px; // changes how far up or down song title is
     text-align: center;
     //transform: translate3d(0, 0, 0);
@@ -197,26 +198,6 @@ page-home {
 
   .button {
     z-index:9999;
-    border-color: white;
-    color: white;
-    position: absolute;
-    left: 230px;
-    bottom: 20px;
-  }
-
-  .button {
-    z-index:9999;
-    background: black;
-    border-color: white;
-    color: white;
-    position: absolute;
-    left: 230px;
-    bottom: 20px;
-  }
-
-  .button:active {
-    z-index:9999;
-    background: linear-gradient(#89fffd, #77A1D3);
     border-color: white;
     color: white;
     position: absolute;
