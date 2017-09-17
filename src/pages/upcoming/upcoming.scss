@@ -26,9 +26,18 @@ page-upcoming {
       background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
       background-repeat: repeat-x;
   }
-  
+
   .fab {
      background: linear-gradient(#89fffd, #77A1D3);
      color: white;
+  }
+
+  ion-item {
+     margin-top: 30px !important;
+     margin-bottom: 30px !important;
+  }
+
+  .button-inner {
+    color: white;
   }
 }

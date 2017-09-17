@@ -12,7 +12,6 @@
 
 </ion-header>
 
-
 <ion-content>
 
     <ion-list>
@@ -22,8 +21,13 @@
     <ion-fab right bottom>
         <button ion-fab color="light"><ion-icon name="share-alt"></ion-icon></button>
         <ion-fab-list side="left">
+
+
           <button ion-fab onclick="window.plugins.socialsharing.shareViaSMS('Send me song recommendations at: 778-888-8888', null /* see the note below */, function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})"><ion-icon name="send"></ion-icon></button>
+
           <button ion-fab onclick="window.plugins.socialsharing.shareViaFacebook('Send me song recommendations at: 778-888-8888', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})"><ion-icon name="logo-facebook"></ion-icon></button>
         </ion-fab-list>
       </ion-fab>
+
+      <button ion-button clear (click)="clear()"><i>Clear All</i></button>
 </ion-content>
