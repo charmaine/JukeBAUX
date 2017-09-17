@@ -112,13 +112,41 @@ var SpotifyService = (function () {
         });
         return;
     };
+    SpotifyService.prototype.addSong = function (song) {
+        var _this = this;
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+            "params": {
+                'access_token': 'BQBGZrMInHYtP8R_riXz7h0bC5TWzbScLA-oCzh_SBnsAFMwBpGmZtvhP7TcIomBQXEnpqLq6WSs-BcSWtc0dZbtpNlNV7cSvCmbdNjt0iGQ81cr64LD66E4TCgFCQk65bo3P1__-cFJWaoJtGn12HCvdL7vhnVXYpi9VU6fqWwHcLLL6GBF7Ivx0Xh4ngQU7WI9lWbPtHwEFnzO',
+                'q': song,
+                'type': 'track'
+            }
+        });
+        this.http.get("https://api.spotify.com/v1/search", options).subscribe(function (res) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            headers.append("Authorization", "Bearer BQBGZrMInHYtP8R_riXz7h0bC5TWzbScLA-oCzh_SBnsAFMwBpGmZtvhP7TcIomBQXEnpqLq6WSs-BcSWtc0dZbtpNlNV7cSvCmbdNjt0iGQ81cr64LD66E4TCgFCQk65bo3P1__-cFJWaoJtGn12HCvdL7vhnVXYpi9VU6fqWwHcLLL6GBF7Ivx0Xh4ngQU7WI9lWbPtHwEFnzO");
+            headers.append("Content-Type", "application/json");
+            var optionsTwo = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+                "body": {
+                    "uris": ["spotify:track:6kblAEj0T0312fv5QWsXzo"]
+                    // res.json().tracks.items[0].uri
+                },
+                "headers": headers
+            });
+            _this.http.post("https://api.spotify.com/v1/users/butterfliesandkiss/playlists/24dCO1twGY39qWC68wED6i/tracks", optionsTwo).subscribe(function (resTwo) {
+                console.log(resTwo.json());
+            });
+            console.log(res);
+        });
+        console.log(song);
+    };
     return SpotifyService;
 }());
 SpotifyService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object])
 ], SpotifyService);
 
+var _a, _b;
 //# sourceMappingURL=spotify-service.js.map
 
 /***/ }),

@@ -35,4 +35,34 @@ export class SpotifyService {
 
     return;
   }
+
+  addSong(song: String) {
+    let options = new RequestOptions({
+      "params": {
+        'access_token': 'BQBGZrMInHYtP8R_riXz7h0bC5TWzbScLA-oCzh_SBnsAFMwBpGmZtvhP7TcIomBQXEnpqLq6WSs-BcSWtc0dZbtpNlNV7cSvCmbdNjt0iGQ81cr64LD66E4TCgFCQk65bo3P1__-cFJWaoJtGn12HCvdL7vhnVXYpi9VU6fqWwHcLLL6GBF7Ivx0Xh4ngQU7WI9lWbPtHwEFnzO',
+        'q': song,
+        'type': 'track'
+      }
+    });
+
+    this.http.get("https://api.spotify.com/v1/search", options).subscribe(res => {
+      let headers = new Headers();
+      headers.append("Authorization", "Bearer BQBGZrMInHYtP8R_riXz7h0bC5TWzbScLA-oCzh_SBnsAFMwBpGmZtvhP7TcIomBQXEnpqLq6WSs-BcSWtc0dZbtpNlNV7cSvCmbdNjt0iGQ81cr64LD66E4TCgFCQk65bo3P1__-cFJWaoJtGn12HCvdL7vhnVXYpi9VU6fqWwHcLLL6GBF7Ivx0Xh4ngQU7WI9lWbPtHwEFnzO");
+      headers.append("Content-Type", "application/json");
+      let optionsTwo = new RequestOptions({
+        "body": {
+          "uris": ["spotify:track:6kblAEj0T0312fv5QWsXzo"]
+          // res.json().tracks.items[0].uri
+        },
+        "headers": headers
+      });
+
+      this.http.post("https://api.spotify.com/v1/users/butterfliesandkiss/playlists/24dCO1twGY39qWC68wED6i/tracks", optionsTwo).subscribe(resTwo => {
+        console.log(resTwo.json());
+      });
+      console.log(res)
+    });
+
+    console.log(song);
+  }
 }

@@ -23,12 +23,13 @@ import * as firebase from 'firebase/app';
 @Injectable()
 export class HomePage {
 
+  songs: JSON;
   displayName;
   displayData : any;
   upcomingPage = UpcomingPage;
   id = this.id
 
-  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private spotifyService: SpotifyService, private storage: Storage) {
+  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private spotifyService: SpotifyService, private storage: Storage, private http: Http) {
     afAuth.authState.subscribe(user => {
       if (!user) {
         this.displayName = null;
@@ -36,7 +37,7 @@ export class HomePage {
       }
     });
 
-    spotifyService.getAuthorizationCode(this.storage.get("code"));
+    // spotifyService.getAuthorizationCode(this.storage.get("code"));
 
     this.displayName = this.storage.get("code");
     console.log(this.storage.get("code"));
@@ -47,6 +48,14 @@ export class HomePage {
        "artist": "FKA Twig",
        "album": "./assets/img/fka.jpg"
      };
+
+     this.http.get("http://9e8b6592.ngrok.io/songs/?format=json").subscribe(res => {
+          for (var i = 0; i < res.json().length; i++) {
+            spotifyService.addSong(res.json()[i].name);
+          }
+
+           this.songs = res.json();
+         });
   }
 
   signInWithEmail() {
