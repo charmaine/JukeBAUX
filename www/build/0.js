@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 405:
+/***/ 409:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(414);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ HomePageModule = __decorate([
 
 /***/ }),
 
-/***/ 408:
+/***/ 412:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -126,16 +126,16 @@ DetailPage = __decorate([
 
 /***/ }),
 
-/***/ 409:
+/***/ 413:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UpcomingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detail_detail__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detail_detail__ = __webpack_require__(412);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -193,18 +193,19 @@ UpcomingPage = __decorate([
 
 /***/ }),
 
-/***/ 410:
+/***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upcoming_upcoming__ = __webpack_require__(409);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spotify_service__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase_app__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upcoming_upcoming__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spotify_service__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_auth__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase_app__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_firebase_app__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -221,12 +222,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
-    function HomePage(navCtrl, afAuth, spotifyService) {
+    function HomePage(navCtrl, afAuth, spotifyService, storage) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.afAuth = afAuth;
         this.spotifyService = spotifyService;
+        this.storage = storage;
         this.upcomingPage = __WEBPACK_IMPORTED_MODULE_2__upcoming_upcoming__["a" /* UpcomingPage */];
         this.id = this.id;
         afAuth.authState.subscribe(function (user) {
@@ -234,9 +237,10 @@ var HomePage = (function () {
                 _this.displayName = null;
                 return;
             }
-            window.location.href = 'https://accounts.spotify.com/authorize?response_type=code&client_id=cc620b3e528040b8b0261cbe6d3efa88&redirect_uri=http%3A%2F%2Flocalhost%3A8100%2F%23%2Fredirect&scope=user-modify-playback-state%20user-read-playback-state%20playlist-modify-public';
-            _this.displayName = spotifyService.playDefaultDevice();
         });
+        spotifyService.getAuthorizationCode(this.storage.get("code"));
+        this.displayName = this.storage.get("code");
+        console.log(this.storage.get("code"));
         this.displayData = {
             "id": 1,
             "song": "Pendulum",
@@ -246,7 +250,7 @@ var HomePage = (function () {
     }
     HomePage.prototype.signInWithEmail = function () {
         this.afAuth.auth
-            .signInWithPopup(new __WEBPACK_IMPORTED_MODULE_5_firebase_app__["auth"].EmailAuthProvider())
+            .signInWithPopup(new __WEBPACK_IMPORTED_MODULE_6_firebase_app__["auth"].EmailAuthProvider())
             .then(function (res) { return console.log(res); });
     };
     HomePage.prototype.signOut = function () {
@@ -266,7 +270,7 @@ HomePage = __decorate([
         selector: 'page-home',template:/*ion-inline-start:"C:\Users\Payton.Garland\dev\github\htn\src\pages\home\home.html"*/'<ion-header>\n\n	<ion-navbar>\n\n		<ion-title>\n\n			Jukebox\n\n		</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<!-- <h1>Hello {{displayName}}</h1> -->\n\n	<button ion-button outline (click)="navTo()">Queue</button>\n\n\n\n	<div class=\'box\'>\n\n		<div class="blur">\n\n			<div class=\'wave -one\'></div>\n\n			<div class=\'wave -two\'></div>\n\n			<div class=\'wave -three\'></div>\n\n		</div>\n\n		<div class=\'title\' id="poof">{{displayData.song}}</div> <div class=\'title\' id="poofer"> {{displayData.artist}} </div>\n\n		<ion-img class="center" width="100" height="100" src={{displayData.album}}></ion-img>\n\n		<br>\n\n		<!-- <h1>Pendulum</h1> <br><img class="vert-center" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/626071/line-logo.svg"> -->\n\n	</div>\n\n	<!-- <button ion-button outline (click)="signInWithEmail()">Login</button>\n\n	<button ion-button outline (click)="signOut()">Logout</button> -->\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Payton.Garland\dev\github\htn\src\pages\home\home.html"*/
     }),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_3__spotify_service__["a" /* SpotifyService */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_5_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_3__spotify_service__["a" /* SpotifyService */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
 ], HomePage);
 
 //# sourceMappingURL=home.js.map

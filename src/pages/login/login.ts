@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UpcomingPage } from '../upcoming/upcoming';
+import { Storage } from '@ionic/storage';
 
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
@@ -21,7 +22,17 @@ import { Http } from '@angular/http';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
+    if (window.location.search.indexOf('code') != -1) {
+
+      var search = window.location.search;
+      console.log(search);
+      search = search.substr(search.indexOf('code') + 5, search.length);
+      storage.set("code", search);
+      console.log(search);
+
+      window.location.href = 'http://localhost:8100/#/home';
+    }
   }
 
   ionViewDidLoad() {

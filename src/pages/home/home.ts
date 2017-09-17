@@ -5,6 +5,7 @@ import { UpcomingPage } from '../upcoming/upcoming';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { SpotifyService } from '../../spotify-service';
+import { Storage } from '@ionic/storage';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
@@ -27,17 +28,18 @@ export class HomePage {
   upcomingPage = UpcomingPage;
   id = this.id
 
-  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private spotifyService: SpotifyService) {
+  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private spotifyService: SpotifyService, private storage: Storage) {
     afAuth.authState.subscribe(user => {
       if (!user) {
         this.displayName = null;
         return;
       }
-
-      window.location.href = 'https://accounts.spotify.com/authorize?response_type=code&client_id=cc620b3e528040b8b0261cbe6d3efa88&redirect_uri=http%3A%2F%2Flocalhost%3A8100%2F%23%2Fredirect&scope=user-modify-playback-state%20user-read-playback-state%20playlist-modify-public';
-
-      this.displayName = spotifyService.playDefaultDevice();
     });
+
+    spotifyService.getAuthorizationCode(this.storage.get("code"));
+
+    this.displayName = this.storage.get("code");
+    console.log(this.storage.get("code"));
 
     this.displayData = {
        "id": 1,
