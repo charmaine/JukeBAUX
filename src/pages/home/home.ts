@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { UpcomingPage } from '../upcoming/upcoming';
 
 import { Injectable } from '@angular/core';
@@ -8,6 +8,12 @@ import { SpotifyService } from '../../spotify-service';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+
+
+@IonicPage({
+  name: 'home',
+  segment: 'home'
+})
 
 @Component({
   selector: 'page-home',
@@ -49,6 +55,6 @@ export class HomePage {
   }
 
   navTo(){
-    this.navCtrl.push(UpcomingPage);
+    this.navCtrl.push('UpcomingPage');
   }
 }

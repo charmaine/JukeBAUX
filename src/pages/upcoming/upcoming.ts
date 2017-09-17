@@ -33,7 +33,7 @@ export class UpcomingPage {
   }
 
   more(id){
-    this.navCtrl.push(DetailPage, {id: id});
+    this.navCtrl.push('DetailPage', {id: id});
     console.log({id: id});
   }
 

@@ -25,9 +25,9 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    UpcomingPage,
-    DetailPage
+    // HomePage,
+    // UpcomingPage,
+    // DetailPage
   ],
   imports: [
     BrowserModule,
@@ -40,9 +40,9 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    UpcomingPage,
-    DetailPage
+    // HomePage,
+    // UpcomingPage,
+    // DetailPage
   ],
   providers: [
     StatusBar,

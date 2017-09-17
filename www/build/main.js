@@ -1,159 +1,5 @@
 webpackJsonp([2],{
 
-/***/ 138:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the DetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DetailPage = (function () {
-    function DetailPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.id = this.navParams.get('id');
-        this.displayData = [
-            {
-                "id": 1,
-                "song": "Hotline Bling",
-                "artist": "Drake",
-                "album": "../assets/img/drake.png"
-            },
-            {
-                "id": 2,
-                "song": "AAA",
-                "artist": "Drake",
-                "album": "../assets/img/drake.png"
-            },
-            {
-                "id": 3,
-                "song": "BB",
-                "artist": "Drake",
-                "album": "../assets/img/drake.png"
-            },
-            {
-                "id": 4,
-                "song": "HCCC",
-                "artist": "Drake",
-                "album": "../assets/img/drake.png"
-            },
-            {
-                "id": 5,
-                "song": "DDD",
-                "artist": "Drake",
-                "album": "../assets/img/drake.png"
-            }
-        ];
-        this.data = this.displayData[this.id];
-        for (var _i = 0, _a = this.displayData; _i < _a.length; _i++) {
-            var data = _a[_i];
-            if (data.id == this.id)
-                this.data = this.data;
-        }
-    }
-    DetailPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailPage');
-    };
-    return DetailPage;
-}());
-DetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-detail',template:/*ion-inline-start:"/Users/charmaine/Desktop/hackthenorth/src/pages/detail/detail.html"*/'<ion-header>\n	<ion-navbar>\n		<ion-title>\n			Jukebox\n		</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- <h1>Hello {{displayName}}</h1> -->\n\n	<div class=\'box\'>\n		<div class="blur">\n			<div class=\'wave -one\'></div>\n			<div class=\'wave -two\'></div>\n			<div class=\'wave -three\'></div>\n		</div>\n		<div class=\'title\' id="poof">{{data.song}}</div> <div class=\'title\' id="poofer"> {{data.artist}} </div>\n		<ion-img class="center" width="100" height="100" src={{data.album}}></ion-img>\n		<br>\n		<!-- <h1>Pendulum</h1> <br><img class="vert-center" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/626071/line-logo.svg"> -->\n	</div>\n	<!-- <button ion-button outline (click)="signInWithEmail()">Login</button>\n	<button ion-button outline (click)="signOut()">Logout</button> -->\n</ion-content>\n'/*ion-inline-end:"/Users/charmaine/Desktop/hackthenorth/src/pages/detail/detail.html"*/,
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
-], DetailPage);
-
-var _a, _b;
-//# sourceMappingURL=detail.js.map
-
-/***/ }),
-
-/***/ 139:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UpcomingPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detail_detail__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var UpcomingPage = (function () {
-    function UpcomingPage(navCtrl, navParams, http) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.http = http;
-        this.detailPage = __WEBPACK_IMPORTED_MODULE_2__detail_detail__["a" /* DetailPage */];
-        this.options = {};
-        this.http.get("http://f155ae88.ngrok.io/songs/?format=json").subscribe(function (res) {
-            _this.songs = res.json();
-        });
-    }
-    UpcomingPage.prototype.more = function (id) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__detail_detail__["a" /* DetailPage */], { id: id });
-        console.log({ id: id });
-    };
-    UpcomingPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad UpcomingPage');
-    };
-    return UpcomingPage;
-}());
-UpcomingPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
-    /**
-     * Generated class for the UpcomingPage page.
-     *
-     * See https://ionicframework.com/docs/components/#navigation for more info on
-     * Ionic pages and navigation.
-     */
-    ,
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-upcoming',template:/*ion-inline-start:"/Users/charmaine/Desktop/hackthenorth/src/pages/upcoming/upcoming.html"*/'<!--\n  Generated template for the UpcomingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Song Queue</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n    <ion-list>\n        <a *ngFor="let song of songs"><ion-item (click)="more(song.id)">{{song.name}}</ion-item></a>\n    </ion-list>\n\n    <ion-fab right bottom>\n        <button ion-fab color="light"><ion-icon name="share-alt"></ion-icon></button>\n        <ion-fab-list side="left">\n          <button ion-fab onclick="window.plugins.socialsharing.shareViaSMS(\'Send me song recommendations at: 778-888-8888\', null /* see the note below */, function(msg) {console.log(\'ok: \' + msg)}, function(msg) {alert(\'error: \' + msg)})"><ion-icon name="send"></ion-icon></button>\n          <button ion-fab onclick="window.plugins.socialsharing.shareViaFacebook(\'Send me song recommendations at: 778-888-8888\', null /* img */, null /* url */, function() {console.log(\'share ok\')}, function(errormsg){alert(errormsg)})"><ion-icon name="logo-facebook"></ion-icon></button>\n        </ion-fab-list>\n      </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/charmaine/Desktop/hackthenorth/src/pages/upcoming/upcoming.html"*/,
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _c || Object])
-], UpcomingPage);
-
-var _a, _b, _c;
-//# sourceMappingURL=upcoming.js.map
-
-/***/ }),
-
 /***/ 147:
 /***/ (function(module, exports) {
 
@@ -177,11 +23,15 @@ webpackEmptyAsyncContext.id = 147;
 var map = {
 	"../pages/detail/detail.module": [
 		406,
-		1
+		6
+	],
+	"../pages/home/home.module": [
+		408,
+		4
 	],
 	"../pages/upcoming/upcoming.module": [
 		407,
-		0
+		5
 	]
 };
 function webpackAsyncContext(req) {
@@ -239,81 +89,6 @@ SpotifyService = __decorate([
 
 /***/ }),
 
-/***/ 234:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upcoming_upcoming__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spotify_service__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase_app__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var HomePage = (function () {
-    function HomePage(navCtrl, afAuth, spotifyService) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.afAuth = afAuth;
-        this.spotifyService = spotifyService;
-        this.upcomingPage = __WEBPACK_IMPORTED_MODULE_2__upcoming_upcoming__["a" /* UpcomingPage */];
-        this.id = this.id;
-        afAuth.authState.subscribe(function (user) {
-            if (!user) {
-                _this.displayName = null;
-                return;
-            }
-            _this.displayName = spotifyService.playDefaultDevice();
-        });
-        this.displayData = {
-            "id": 1,
-            "song": "Pendulum",
-            "artist": "FKA Twig",
-            "album": "../assets/img/fka.jpg"
-        };
-    }
-    HomePage.prototype.signInWithEmail = function () {
-        this.afAuth.auth
-            .signInWithPopup(new __WEBPACK_IMPORTED_MODULE_5_firebase_app__["auth"].EmailAuthProvider())
-            .then(function (res) { return console.log(res); });
-    };
-    HomePage.prototype.signOut = function () {
-        this.afAuth.auth.signOut();
-    };
-    HomePage.prototype.navTo = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__upcoming_upcoming__["a" /* UpcomingPage */]);
-    };
-    return HomePage;
-}());
-HomePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/charmaine/Desktop/hackthenorth/src/pages/home/home.html"*/'<ion-header>\n	<ion-navbar>\n		<ion-title>\n			Jukebox\n		</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- <h1>Hello {{displayName}}</h1> -->\n	<button ion-button outline (click)="navTo()">Queue</button>\n\n	<div class=\'box\'>\n		<div class="blur">\n			<div class=\'wave -one\'></div>\n			<div class=\'wave -two\'></div>\n			<div class=\'wave -three\'></div>\n		</div>\n		<div class=\'title\' id="poof">{{displayData.song}}</div> <div class=\'title\' id="poofer"> {{displayData.artist}} </div>\n		<ion-img class="center" width="100" height="100" src={{displayData.album}}></ion-img>\n		<br>\n		<!-- <h1>Pendulum</h1> <br><img class="vert-center" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/626071/line-logo.svg"> -->\n	</div>\n	<!-- <button ion-button outline (click)="signInWithEmail()">Login</button>\n	<button ion-button outline (click)="signOut()">Logout</button> -->\n</ion-content>\n'/*ion-inline-end:"/Users/charmaine/Desktop/hackthenorth/src/pages/home/home.html"*/
-    }),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_3__spotify_service__["a" /* SpotifyService */]])
-], HomePage);
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
 /***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -342,21 +117,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__spotify_service__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_upcoming_upcoming__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_detail_detail__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angularfire2_database__ = __webpack_require__(358);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angularfire2_auth__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2_database__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_auth__ = __webpack_require__(235);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
 
 
 
@@ -383,9 +152,6 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_upcoming_upcoming__["a" /* UpcomingPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_detail_detail__["a" /* DetailPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -393,19 +159,17 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/detail/detail.module#DetailPageModule', name: 'DetailPage', segment: 'detail', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/upcoming/upcoming.module#UpcomingPageModule', name: 'UpcomingPage', segment: 'upcoming', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/upcoming/upcoming.module#UpcomingPageModule', name: 'UpcomingPage', segment: 'upcoming', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/home/home.module#HomePageModule', name: 'home', segment: 'home', priority: 'low', defaultHistory: [] }
                 ]
             }),
-            __WEBPACK_IMPORTED_MODULE_11_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
-            __WEBPACK_IMPORTED_MODULE_12_angularfire2_database__["a" /* AngularFireDatabaseModule */],
-            __WEBPACK_IMPORTED_MODULE_13_angularfire2_auth__["b" /* AngularFireAuthModule */]
+            __WEBPACK_IMPORTED_MODULE_8_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+            __WEBPACK_IMPORTED_MODULE_9_angularfire2_database__["a" /* AngularFireDatabaseModule */],
+            __WEBPACK_IMPORTED_MODULE_10_angularfire2_auth__["b" /* AngularFireAuthModule */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_upcoming_upcoming__["a" /* UpcomingPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_detail_detail__["a" /* DetailPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -429,7 +193,6 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(234);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -443,10 +206,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
+// import { HomePage } from '../pages/home/home';
+// import { UpcomingPage } from '../pages/upcoming/upcoming';
+// import { DetailPage } from '../pages/detail/detail';
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
+        this.rootPage = 'home';
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
