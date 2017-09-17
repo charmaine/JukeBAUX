@@ -8,6 +8,7 @@
 
 <ion-content padding>
 	<!-- <h1>Hello {{displayName}}</h1> -->
+
 	<button ion-button outline (click)="navTo()">Queue</button>
 
 	<div class='box'>
@@ -18,7 +19,13 @@
 		</div>
 		<div (click)="switch()" class='title' id="poof">{{displayData.song}}</div> <div class='title' id="poofer"> {{displayData.artist}} </div>
 
-		<ion-img  class="center" width="100" height="100" src={{displayData.album}}></ion-img>
+		<ion-img  class="center" width="100" height="100" src={{displayData.album}}>
+		</ion-img>
+
+		<button class="higher" ion-button outline (click)="play()">Play</button>
+
+
+
 
 		<br>
 		<!-- <h1>Pendulum</h1> <br><img class="vert-center" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/626071/line-logo.svg"> -->

@@ -59,7 +59,7 @@ export class HomePage {
     this.navCtrl.push('UpcomingPage');
   }
 
-  switch() {
-    
+  play() {
+    this.navCtrl.push('UpcomingPage');
   }
 }

@@ -215,6 +215,17 @@ page-home {
     bottom: 20px;
   }
 
+  .higher {
+    z-index:9999;
+    background: #212025;
+    background-color: #212025;
+    border-color: white;
+    color: white;
+    position: absolute;
+    left: 220px;
+    bottom: 60px;
+  }
+
   .button:active {
     z-index:9999;
     background: linear-gradient(#89fffd, #77A1D3);
