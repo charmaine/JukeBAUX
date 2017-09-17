@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetailPage } from '../detail/detail';
+import { Injectable } from '@angular/core';
+import { Http, RequestOptions, Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Injectable()
 
 /**
  * Generated class for the UpcomingPage page.
@@ -16,34 +22,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class UpcomingPage {
 
   songs: any;
+  detailPage = DetailPage;
+  options = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.songs = [
-      {
-        "id": 1,
-        "title": "Cold Water"
-      },
-      {
-        "id": 2,
-        "title": "Provider"
-      },
-      {
-        "id": 3,
-        "title": "God of Joy"
-      },
-      {
-        "id": 4,
-        "title": "Boopity Bop"
-      },
-      {
-        "id": 5,
-        "title": "Bop Bop Bop"
-      },
-      {
-        "id": 6,
-        "title": "Bop to the top"
-      }
-    ];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http : Http) {
+
+  this.http.get("http://f155ae88.ngrok.io/songs/?format=json").subscribe(res => {
+        this.songs= res.json();
+      });
+  }
+
+  more(id){
+    this.navCtrl.push('DetailPage', {id: id});
+    console.log({id: id});
   }
 
   ionViewDidLoad() {
