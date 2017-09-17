@@ -60,6 +60,7 @@ export class HomePage {
   }
 
   play() {
+    this.spotifyService.playDefaultDevice();
     this.navCtrl.push('UpcomingPage');
   }
 }
