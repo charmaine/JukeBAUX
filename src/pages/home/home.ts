@@ -40,7 +40,7 @@ export class HomePage {
        "id": 1,
        "song": "Pendulum",
        "artist": "FKA Twig",
-       "album": "../assets/img/fka.jpg"
+       "album": "./assets/img/fka.jpg"
      };
   }
 

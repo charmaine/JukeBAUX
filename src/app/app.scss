@@ -14,31 +14,3 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
-$SIDEMENU_TOP: #89fffd;
-$SIDEMENU_BOTTOM: #77A1D3;
-$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
-
-.toolbar-background-md {
-    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background-repeat: repeat-x;
-}
-
-.toolbar-background-ios{
-    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background-repeat: repeat-x;
-}
-
-.toolbar-background-wp{
-    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background-repeat: repeat-x;
-}

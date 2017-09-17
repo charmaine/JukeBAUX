@@ -25199,27 +25199,6 @@ ion-navbar.toolbar {
   }
 }
 
-.toolbar-background-md {
-  background: -webkit-gradient(left top, #89fffd, #77A1D3);
-  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
-  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
-  background-repeat: repeat-x;
-}
-
-.toolbar-background-ios {
-  background: -webkit-gradient(left top, #89fffd, #77A1D3);
-  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
-  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
-  background-repeat: repeat-x;
-}
-
-.toolbar-background-wp {
-  background: -webkit-gradient(left top, #89fffd, #77A1D3);
-  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
-  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
-  background-repeat: repeat-x;
-}
-
 page-detail .toolbar-background-md {
   background: -webkit-gradient(left top, #6A82FB, #FC5C7D);
   background: -webkit-gradient(linear, left top, right bottom, from(#6A82FB), to(#FC5C7D));
@@ -25344,7 +25323,6 @@ page-detail .box:after {
 page-detail .title {
   position: absolute;
   width: 100%;
-  z-index: 1;
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -25428,6 +25406,27 @@ page-detail .button {
   position: absolute;
   left: 230px;
   bottom: 20px;
+}
+
+page-home .toolbar-background-md {
+  background: -webkit-gradient(left top, #89fffd, #77A1D3);
+  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
+  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
+  background-repeat: repeat-x;
+}
+
+page-home .toolbar-background-ios {
+  background: -webkit-gradient(left top, #89fffd, #77A1D3);
+  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
+  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
+  background-repeat: repeat-x;
+}
+
+page-home .toolbar-background-wp {
+  background: -webkit-gradient(left top, #89fffd, #77A1D3);
+  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
+  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
+  background-repeat: repeat-x;
 }
 
 page-home .center {
@@ -25606,6 +25605,27 @@ page-home .button {
   position: absolute;
   left: 230px;
   bottom: 20px;
+}
+
+page-upcoming .toolbar-background-md {
+  background: -webkit-gradient(left top, #89fffd, #77A1D3);
+  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
+  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
+  background-repeat: repeat-x;
+}
+
+page-upcoming .toolbar-background-ios {
+  background: -webkit-gradient(left top, #89fffd, #77A1D3);
+  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
+  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
+  background-repeat: repeat-x;
+}
+
+page-upcoming .toolbar-background-wp {
+  background: -webkit-gradient(left top, #89fffd, #77A1D3);
+  background: -webkit-gradient(linear, left top, right bottom, from(#89fffd), to(#77A1D3));
+  background: linear-gradient(to bottom right, #89fffd, #77A1D3);
+  background-repeat: repeat-x;
 }
 
 page-upcoming .fab {
