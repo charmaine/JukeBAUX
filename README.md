@@ -4,7 +4,7 @@
 As music streaming applications become increasingly popular, we can't help but wonder how we could contribute to pushing the boundaries of one of our favourite platforms. As avid users of Spotify, we wanted to extend the capabilities of the application and fill the gap between its current functions and the potential we see in it. This is perfect for road trips-- no more fighting over the Aux cord, or other group activities like hiking, campfires or even parties.
 
 ## What it does
-JukeBAUX only requires one user within the collaborative playlist to have Spotify. This user will then act as the DJ, but the song choices are directly chosen and voted upon by their peers via SMS, forming a priority queue of the best )(collaboratively agreed upon) playlist ever. 
+JukeBAUX only requires one user within the collaborative playlist to have Spotify. This user will then act as the DJ, but the song choices are directly chosen and voted upon by their peers via SMS, forming a priority queue of the best (collaboratively agreed upon) playlist ever. 
 
 ## How we built it
 The application is a responsive cross-platform Progressive Web App (supports all of Android, iOS, Windows phones). We integrated Twilio's API in Python to receive text messages of song titles from users to one designated phone number, these song titles are lined up in our playlist according to popularity. We then store these requests in our database and search for matching song titles with the Spotify API, playing the playlist in a dynamic order on the user's native platform (works on phone & web).
